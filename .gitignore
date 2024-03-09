@@ -1,0 +1,47 @@
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# Uploaded files directory (if any)
+/uploads
+
+# macOS system files
+.DS_Store
+
+# IDE files
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Build files
+/build
+
+# Compiled files (if TypeScript or similar)
+*.js
+*.js.map
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Environment configurations
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# User-specific files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
