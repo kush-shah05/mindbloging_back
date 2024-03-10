@@ -14,7 +14,7 @@ require('dotenv').config();
 
 
 const app = express();
-app.use(cors({ credentials: true, origin: 'https://elegant-syrniki-f43114.netlify.app/' }));
+app.use(cors({ credentials: true, origin: 'https://elegant-syrniki-f43114.netlify.app' }));
 app.use(express.json());
 app.use(cookieParser());
 
