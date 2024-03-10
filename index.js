@@ -147,7 +147,7 @@ app.put("/post", uploadMiddleware.single("file"), async (req, res) => {
     fs.renameSync(path, newpath);
   }
   const { token } = req.cookies;
-  jwt.verify(token, secret, async (err, info) => {
+  jwt.verify(token, secret,{}, async (err, info) => {
     if (err) throw err;
     const { id, title, summary, content } = req.body;
     const postDoc = await Post.findById(id);
