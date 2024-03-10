@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 const salt = bcrypt.genSaltSync(10);
-const secret = process.env.SECRET;
+const secret = 'secret';
 app.use("/uploads", express.static(__dirname + "/uploads"));
 app.get("/test", (req, res) => {
   res.json("hello");
