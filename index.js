@@ -75,7 +75,7 @@ app.get("/profile", (req, res) => {
     return res.status(401).json({ message: "No token provided" });
   }
 
-  jwt.verify(token, secret, (err, decoded) => {
+  jwt.verify(token, secret,{}, (err, decoded) => {
     if (err) {
       console.error("JWT verification error:", err.message);
       return res.status(403).json({ message: "Failed to authenticate token" });
@@ -88,7 +88,7 @@ app.get("/profile", (req, res) => {
 app.post("/post", uploadMiddleware.single("file"), async (req, res) => {
   const { token } = req.cookies;
 
-  jwt.verify(token, secret, async (err, decoded) => {
+  jwt.verify(token, secret,{}, async (err, decoded) => {
     if (err) {
       console.error("JWT verification error:", err.message);
       return res.status(403).json({ message: "Failed to authenticate token" });
